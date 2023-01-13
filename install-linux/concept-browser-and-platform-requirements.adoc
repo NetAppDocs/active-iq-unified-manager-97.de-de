@@ -1,0 +1,22 @@
+---
+permalink: install-linux/concept-browser-and-platform-requirements.html 
+sidebar: sidebar 
+keywords:  
+summary: Für den Zugriff auf die Unified Manager-Benutzeroberfläche müssen Sie einen unterstützten Browser verwenden. 
+---
+= Unterstützte Browser
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für den Zugriff auf die Unified Manager-Benutzeroberfläche müssen Sie einen unterstützten Browser verwenden.
+
+In der Interoperabilitäts-Matrix finden Sie eine Liste der unterstützten Browser-Versionen.
+
+http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]
+
+Bei allen Browsern hilft das Deaktivieren von Popup-Blockern, sicherzustellen, dass die Softwarefunktionen ordnungsgemäß angezeigt werden.
+
+Wenn Sie planen, Unified Manager für SAML-Authentifizierung zu konfigurieren, damit ein Identitäts-Provider (IdP) Benutzer authentifizieren kann, überprüfen Sie die Liste der vom IdP unterstützten Browser.

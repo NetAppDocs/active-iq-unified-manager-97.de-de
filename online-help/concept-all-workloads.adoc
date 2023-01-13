@@ -1,0 +1,83 @@
+---
+permalink: online-help/concept-all-workloads.html 
+sidebar: sidebar 
+keywords: workloads,workloads 
+summary: In der Ansicht Alle Workloads wird eine Liste aller Workloads angezeigt, die auf den Clustern in einem Datacenter verfügbar sind. 
+---
+= Alle Workloads
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In der Ansicht Alle Workloads wird eine Liste aller Workloads angezeigt, die auf den Clustern in einem Datacenter verfügbar sind.
+
+In der Ansicht Alle Workloads werden die Storage Workloads aufgelistet, die mit den von Unified Manager gemanagten ONTAP Clustern verbunden sind. Auf der Seite können Sie Storage Workloads auch Storage-Effizienzrichtlinien und Performance Service Levels zuweisen.
+
+Wenn Cluster zu Unified Manager hinzugefügt werden, werden die Storage-Workloads auf jedem Cluster automatisch erkannt und auf dieser Seite angezeigt, mit Ausnahme von FlexGroup Volumes und zugehörigen Komponenten.
+
+Unified Manager beginnt die Analyse der Workloads für Empfehlungen (Empfohlene Performance-Service-Level) erst, nachdem I/O-Vorgänge auf den Storage Workloads gestartet wurden. Für die neu erkannten Storage-Workloads, für die es keine I/O-Vorgänge gab, lautet der Status „`Warten auf I/O`“. Nachdem der I/O-Betrieb auf den Storage Workloads gestartet wurde, startet Unified Manager die Analyse und ändert sich der Workload-Status in „`Learning...`“. Nach Abschluss der Analyse (innerhalb von 24 Stunden nach Beginn der I/O-Vorgänge) werden die empfohlenen Performance-Service-Level für die Storage-Workloads angezeigt.
+
+Mit der Option *Workloads* > *Alle Workloads* können Sie mehrere Aufgaben ausführen:
+
+* Hinzufügen oder Bereitstellen von Storage Workloads
+* Liste der Workloads anzeigen und filtern
+* Zuweisung von Performance Service Levels für einzelne Storage-Workloads
+* Weisen Sie allen nicht zugewiesenen Workloads durch das System empfohlene Performance-Service-Level zu
+* Zuweisung von Storage-Effizienz-Richtlinien zu Storage-Workloads
+
+
+
+
+== Hinzufügen oder Bereitstellen von Storage Workloads
+
+Sie können die Storage-Workloads zu unterstützten LUNs (unterstützt sowohl iSCSI- als auch FCP-Protokolle), NFS-Dateifreigaben und SMB-Freigaben hinzufügen oder bereitstellen.
+
+
+
+== Anzeigen und Filtern von Workloads
+
+Im Bildschirm „Alle Workloads“ können Sie alle Workloads im Datacenter anzeigen oder anhand der ihnen zugewiesenen Performance-Service-Level oder anhand von Workload-Namen nach bestimmten Storage Workloads suchen. Über das Filtersymbol können Sie spezifische Bedingungen für Ihre Suche eingeben. Sie können unterschiedliche Filterbedingungen suchen, z. B. nach dem Host-Cluster oder der Storage-VM. Wenn Sie die Option *Capacity Total* wählen, können Sie nach der Gesamtkapazität der Workloads suchen. Die Anzahl der zurückgegebenen Workloads kann je nach eingegebener Filterbedingung variieren, da die Kapazität auf Byte-Ebene verglichen wird. Im Bildschirm werden ggf. Storage-Informationen für die Workloads, z. B. Host-Cluster und Storage-VM, sowie Performance Service Level und Storage-Effizienz-Richtlinie angezeigt.
+
+Auf der Seite können Sie auch die Performance-Details eines Workloads anzeigen. Sie können detaillierte Informationen über die IOPS, Kapazität und Latenz des Workloads anzeigen, indem Sie auf die Schaltfläche *Spalten auswählen / Reihenfolge* klicken und bestimmte Spalten auswählen, die angezeigt werden sollen. In der Spalte „Performance View“ werden die durchschnittlichen und Spitzen-IOPS für einen Workload angezeigt. Durch Klicken auf das Symbol für die Workload-Analyse wird die detaillierte IOPS-Analyse angezeigt. Die Schaltfläche *Workload analysieren* im Pop-up-Fenster zur IOPS-Analyse führt Sie zur Seite Workload-Analyse, auf der Sie einen Zeitbereich auswählen und die Latenz-, Durchsatz- und Kapazitätstrends für den ausgewählten Workload anzeigen können. Weitere Informationen zur Workload-Analyse finden Sie unter _Fehlerbehebung von Workloads mithilfe des Workload Analyzer_
+
+link:concept-troubleshooting-workloads-using-the-workload-analyzer.adoc["Fehlersuche bei Workloads mithilfe der Workload Analyzer"]
+
+
+
+== Zuweisung von Performance Service Levels zu Storage Workloads
+
+Sie können einem einzelnen oder mehreren Storage Workloads ein Performance-Service-Level zuweisen. Mithilfe der verschiedenen Navigationsfunktionen auf dem Bildschirm können Sie den Workloads ein bestimmtes oder vom System empfohlenes Performance Service Level zuweisen.
+
+
+
+== Zuweisen von vom System empfohlenen Performance-Service-Leveln für alle nicht zugewiesenen Workloads
+
+Sie können allen Storage-Workloads in einem Datacenter Performance-Service-Level zuweisen, denen keine PSLs zugewiesen sind, vorausgesetzt, dass für die Workloads vom System empfohlene Performance-Service-Level zur Verfügung stehen. Diese Funktion eignet sich nicht für Workloads, die über keine vom System empfohlenen Performance-Service-Level verfügen. Um diese Funktionalität zu nutzen, klicken Sie auf die Schaltfläche *System Empfohlene PSLs*. Das System bewertet intern die entsprechenden Performance Service Level für die nicht zugewiesenen Storage-Workloads und zeigt die Gesamtzahl der Workloads an, denen die Performance Service Level zugewiesen werden können.
+
+
+
+== Zuweisung von Storage-Effizienzrichtlinien zu Storage Workloads
+
+Sie können einer oder mehreren Storage-Workloads eine Storage-Effizienzrichtlinie zuweisen. Mithilfe der verschiedenen Navigationsfunktionen auf dem Bildschirm können Sie den Storage Workloads eine bestimmte Storage-Effizienzrichtlinie zuweisen.
+
+
+
+== Performance Service Level und Storage-Effizienz-Richtlinie werden gemeinsam zugewiesen
+
+Sie können einem einzelnen Workload zusammen ein Performance-Service-Level und eine Storage-Effizienz-Richtlinie zuweisen. Führen Sie hierzu folgende Schritte aus:
+
+. Klicken Sie auf das Bearbeiten-Symbol für die Zeile und dann auf *Bearbeiten*.
++
+Die Felder *zugewiesene Performance Service Level* und *Storage Efficiency Policy* sind aktiviert.
+
+. Wählen Sie die erforderliche Service-Level- und Storage-Effizienz-Richtlinie für die Performance aus.
+. Klicken Sie auf das Häkchen-Symbol, um die Änderungen anzuwenden.
+
+
+
+
+== Analyse der Performance- und Kapazitätskriterien für einen Workload
+
+Sie können Leistungsinformationen über einen Workload anzeigen, um bei der Fehlerbehebung zu helfen, indem Sie auf das Balkendiagramm-Symbol in der Spalte *Performance View* klicken. Um Performance- und Kapazitätsdiagramme auf der Seite Workload Analysis anzuzeigen, um das Objekt zu analysieren, klicken Sie auf die Schaltfläche *Workload analysieren*.

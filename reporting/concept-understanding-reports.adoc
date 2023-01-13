@@ -1,0 +1,24 @@
+---
+permalink: reporting/concept-understanding-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: In Berichten werden detaillierte Informationen zu Storage, Netzwerk, Servicequalität und Sicherungsbeziehungen angezeigt, sodass Sie potenzielle Probleme erkennen und beheben können, bevor sie auftreten. 
+---
+= Allgemeines zu Berichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In Berichten werden detaillierte Informationen zu Storage, Netzwerk, Servicequalität und Sicherungsbeziehungen angezeigt, sodass Sie potenzielle Probleme erkennen und beheben können, bevor sie auftreten.
+
+Sie können Berichte als PDF- oder CSV-Dateien (Comma Separated Values) herunterladen. Wenn Sie eine Ansicht anpassen, können Sie diese mit einem eindeutigen Namen für die zukünftige Verwendung speichern. Sie können einen Bericht auch auf Basis dieser Ansicht planen, um ihn regelmäßig zu erstellen und an andere weiterzugeben.
+
+Sie können alle Berichte verwalten, die geplant wurden, über die Seite „Berichtszeitpläne“.
+
+[NOTE]
+====
+Zum Verwalten von Berichten müssen Sie über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+====

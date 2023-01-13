@@ -1,0 +1,18 @@
+---
+permalink: reporting/concept-unified-manager-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Active IQ Unified Manager \(ehemals OnCommand Unified Manager\) bietet die Möglichkeit, Berichte für Ihre ONTAP Storage-Systeme anzuzeigen, anzupassen, herunterzuladen und zu planen. Die Berichte können Details zur Kapazität, dem Zustand, der Performance und der Sicherung des Storage-Systems enthalten.' 
+---
+= Unified Manager Berichterstellung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager (ehemals OnCommand Unified Manager) bietet die Möglichkeit, Berichte für Ihre ONTAP Storage-Systeme anzuzeigen, anzupassen, herunterzuladen und zu planen. Die Berichte können Details zur Kapazität, dem Zustand, der Performance und der Sicherung des Storage-Systems enthalten.
+
+Die neue Active IQ Unified Manager 9.6 Funktion für Reporting und Planung von Unified Manager ersetzt die bisherige Reporting Engine, die in Unified Manager Version 9.5 außer Betrieb genommen wurde.
+
+Die Berichterstellung ermöglicht verschiedene Ansichten Ihres Netzwerks und bietet nützliche Informationen zu Kapazitäts-, Zustand-, Performance- und Sicherungsdaten. Sie können Ihre Ansichten anpassen, indem Sie Spalten ein- und ausblenden, Spalten neu anordnen, Daten filtern, Daten sortieren und die Ergebnisse durchsuchen. Sie können benutzerdefinierte Ansichten zur Wiederverwendung speichern, sie als Berichte herunterladen und als wiederkehrende Berichte über E-Mails verteilen.

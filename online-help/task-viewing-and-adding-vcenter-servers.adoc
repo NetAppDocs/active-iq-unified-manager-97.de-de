@@ -1,0 +1,78 @@
+---
+permalink: online-help/task-viewing-and-adding-vcenter-servers.html 
+sidebar: sidebar 
+keywords: vCenter server 
+summary: 'Um die Performance der virtuellen Maschinen \(VMs\) anzuzeigen und zu beheben, müssen die zugehörigen vCenters in Ihrer Active IQ Unified Manager-Instanz hinzugefügt werden.' 
+---
+= Anzeigen und Hinzufügen von vCenter-Servern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um die Performance der Virtual Machines (VMs) anzuzeigen und zu beheben, müssen die zugehörigen vCenters in Ihrer Active IQ Unified Manager Instanz hinzugefügt werden.
+
+
+
+== Bevor Sie beginnen
+
+Stellen Sie vor dem Hinzufügen oder Anzeigen der vCenters Folgendes sicher:
+
+* Sie kennen die vCenter Namen.
+* Die vCenters sind für eine erfolgreiche Entdeckung erreichbar.
+* Sie kennen die IP-Adresse und haben die Anmeldeinformationen, während Sie vCenter hinzufügen. Die Anmeldedaten müssen ein vCenter-Administrator oder ein Root-Benutzer mit schreibgeschütztem Zugriff auf vCenter sein.
+* Das vCenter, das Sie hinzufügen möchten, läuft vSphere 6.5 oder höher.
+* Die Datenerfassungseinstellung im vCenter-Server ist für 5-Minuten-Intervall auf Ebene 3 eingestellt
+* Die Latenzwerte in vCenter werden für die erfolgreiche Berechnung der Latenzwerte in Millisekunden und nicht im Mikrosekunden-Bereich konfiguriert.
+* Die Zeit des vCenter gehört zur Zeitzone des vCenter.
+
+
+
+
+== Über diese Aufgabe
+
+Bei jedem hinzugefügten und erkannten vCenter erfasst Unified Manager die Konfigurationsdaten wie z. B. Angaben zu vCenter und ESXi Server, ONTAP Mapping, Datenspeicherdetails und die Anzahl der gehosteten VMs. Es sammelt weiter die Leistungskennzahlen der Komponenten.
+
+
+
+== Schritte
+
+. Gehen Sie zu *VMWARE* > *vCenter,* und prüfen Sie, ob Ihr vCenter auf der Liste verfügbar ist.
++
+[NOTE]
+====
+Wenn Ihr vCenter nicht verfügbar ist, müssen Sie das vCenter hinzufügen.
+
+====
++
+.. Klicken Sie Auf *Hinzufügen*.
+.. Fügen Sie die richtige IP-Adresse für vCenter hinzu und stellen Sie sicher, dass das Gerät erreichbar ist.
+.. Fügen Sie den Benutzernamen und das Kennwort des Administrators oder Root-Benutzers mit schreibgeschütztem Zugriff auf vCenter hinzu.
+.. Fügen Sie die benutzerdefinierte Portnummer hinzu, wenn Sie einen anderen als den Standardport verwenden `443`.
+.. Klicken Sie Auf *Speichern*. Nach erfolgreicher Ermittlung wird ein Serverzertifikat angezeigt, mit dem Sie akzeptieren können.
++
+Wenn Sie das Zertifikat akzeptieren, wird vCenter zur Liste der verfügbaren vCenters hinzugefügt. Das Hinzufügen des Geräts führt nicht zur Datenerfassung der zugehörigen VMs, und die Sammlung erfolgt in geplanten Intervallen.
+
+
+
+. Wenn Ihr vCenter auf der Seite *vCenters* verfügbar ist, überprüfen Sie dessen Status. Wenn Sie die Maus über das Feld *Status* bewegen, wird angezeigt, ob Ihr vCenter wie erwartet funktioniert oder ob eine Warnung oder ein Fehler vorliegt.
++
+[NOTE]
+====
+Beim Hinzufügen des vCenter können Sie die folgenden Status anzeigen: Die Performance- und Latenzdaten der entsprechenden VMs können jedoch bis zu eine Stunde dauern, nachdem Sie vCenter hinzugefügt haben, um sich exakt wiederspiegeln zu können.
+
+====
++
+** Grün: Normal. Dies zeigt an, dass vCenter erkannt wurde und Performance-Metriken erfolgreich erfasst wurden
+** Gelb: Warnung (z. B. wenn die Statistikebene für den vCenter-Server nicht auf 3 oder höher festgelegt wurde, um Statistiken für jedes Objekt abzurufen)
+** Orange: Fehler (zeigt interne Fehler an, z. B. Ausnahme, Fehler bei der Erfassung von Konfigurationsdaten oder vCenter, die nicht erreichbar sind) Sie können auf das Spaltenanzeigungssymbol (*Anzeigen/Ausblenden*) klicken, um die Statusmeldung für einen vCenter-Status anzuzeigen und das Problem zu beheben.
+
+
+. Falls vCenter nicht erreichbar ist oder die Anmeldeinformationen geändert wurden, bearbeiten Sie die vCenter-Details. Wählen Sie das vCenter aus und klicken Sie dann auf *Bearbeiten*.
+. Nehmen Sie die erforderlichen Änderungen auf der Seite *Edit VMware vCenter Server* vor.
+. Klicken Sie Auf *Speichern*.
++
+Bei der erfolgreichen Erkennung ändert sich der Status von vCenter.
+
+

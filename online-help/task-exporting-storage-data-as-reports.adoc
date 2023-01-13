@@ -1,0 +1,76 @@
+---
+permalink: online-help/task-exporting-storage-data-as-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie können Daten in eine kommagetrennte Datei \(.csv\) oder in ein \(.pdf\)-Dokument exportieren und die exportierten Daten zum Erstellen von Berichten verwenden. Wenn z. B. 10 kritische Ereignisse vorliegen, die nicht behoben wurden, können Sie die Daten von der Seite „Ereignismanagement-Bestand“ exportieren, um einen Bericht zu erstellen, und anschließend entsprechende Maßnahmen ergreifen.' 
+---
+= Exportieren von Daten in CSV- und PDF-Dateien zur Berichterstellung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Daten in kommagetrennte Werte exportieren (`.csv`) Datei oder (`.pdf`) Dokumentieren und die exportierten Daten zum Erstellen von Berichten verwenden. Wenn z. B. 10 kritische Ereignisse vorliegen, die nicht behoben wurden, können Sie die Daten von der Seite „Ereignismanagement-Bestand“ exportieren, um einen Bericht zu erstellen, und anschließend entsprechende Maßnahmen ergreifen.
+
+
+
+== Über diese Aufgabe
+
+Sie können Daten in ein exportieren `.csv` Datei oder `.pdf` Dokumentieren Sie dies auf den Seiten „Speicher“, „Netzwerk“ und „Quality of Service“, und erstellen Sie Berichte mithilfe der exportierten Daten.
+
+
+
+== Schritte
+
+. Führen Sie eine der folgenden Aktionen aus:
++
+[cols="1a,1a"]
+|===
+| Exportieren... | Tun Sie das... 
+
+
+ a| 
+Veranstaltungsdetails
+ a| 
+Klicken Sie im linken Navigationsmenü auf *Ereignisverwaltung*.
+
+
+
+ a| 
+Details zum Storage-Objektbestand
+ a| 
+Klicken Sie im linken Navigationsmenü auf *Storage* oder *Network* und wählen Sie dann ein Speicherobjekt aus. Wählen Sie dann eine der * Health*-, *Capacity*-, *Performance*- oder *Relationship*-Ansichten.
+
+
+
+ a| 
+Details zur Storage-Kapazität und zum Sicherungsverlauf
+ a| 
+Klicken Sie auf *Storage* > *Aggregate* oder *Storage* > *Volumes* und wählen Sie dann ein einzelnes Aggregat oder Volume aus.
+
+
+
+ a| 
+Storage Objekt: Top 10 Performance-Details
+ a| 
+Klicken Sie auf *Storage* > *Cluster* > *Performance/All Clusters*, wählen Sie dann einen Cluster aus und wählen Sie die Registerkarte *Top Performers* aus. Wählen Sie dann ein Storage-Objekt und einen Performance-Zähler aus.
+
+
+
+ a| 
+Details zur QoS-Richtliniengruppe
+ a| 
+Klicken Sie im linken Navigationsmenü auf *Storage* > *QoS Policy Groups*.
+
+|===
+. Klicken Sie auf die Schaltfläche *Exportieren*.
+. Klicken Sie zur Bestätigung der Exportanforderung auf *CSV-Datei* oder *PDF-Dokument*.
++
+Auf der Registerkarte „Top Performers“ können Sie einen Bericht der Statistiken für den einzelnen Cluster, den Sie anzeigen, oder für alle Cluster im Datacenter herunterladen.
+
++
+Die Datei wird heruntergeladen.
+
+. Öffnen Sie das `.csv` Datei oder `.pdf` In der entsprechenden Anmeldung dokumentieren.
+

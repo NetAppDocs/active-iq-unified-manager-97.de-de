@@ -1,0 +1,75 @@
+---
+permalink: online-help/task-provisioning-fileshares.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Auf der Seite „Workloads bereitstellen“ können Sie LUNs \(Unterstützung für iSCSI- und FCP-Protokolle\) oder Dateifreigaben \(Unterstützung von CIFS/SMB- und NFS-Protokollen\) für ein vorhandenes Cluster und Storage Virtual Machine \ (Storage VM\) erstellen, wenn freier Speicherplatz verfügbar ist.' 
+---
+= Bereitstellung von Workloads
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Auf der Seite „Workloads bereitstellen“ können Sie LUNs (unterstützt sowohl iSCSI- als auch FCP-Protokolle) oder Dateifreigaben (unterstützt CIFS/SMB- und NFS-Protokolle) für ein vorhandenes Cluster und Storage Virtual Machine (Storage VM) erstellen, sobald freier Speicherplatz verfügbar ist.
+
+
+
+== Bevor Sie beginnen
+
+* Mindestens einer der SMB-, NFS-, iSCSI- und FCP-Services oder alle Services sollte auf Ihrer Storage VM aktiviert sein. Wenn Sie LUNs erstellen, müssen iSCSI und FCP aktiviert sein.
+* Für die Auswahl und Zuweisung der Richtlinie zu Performance Service Level und Storage-Effizienz für den Workload müssen die Richtlinien erstellt worden sein, bevor Sie mit der Erstellung des Workloads beginnen.
+
+
+
+
+== Schritte
+
+. Fügen Sie auf der Seite *Workloads bereitstellen* den Namen des Workloads hinzu, den Sie erstellen möchten, und wählen Sie dann den Cluster aus der Liste verfügbar aus, auf der Sie den Workload erstellen möchten.
+. Basierend auf dem ausgewählten Cluster filtert das Feld *STORAGE VM* die verfügbaren virtuellen Speichermaschinen für diesen Cluster. Wählen Sie die erforderliche Storage-VM aus der Liste aus.
++
+Die auf den von der Storage-VM unterstützten SMB-, NFS-, iSCSI- und FCP-Services basieren auf den im Abschnitt „Host Information“ aktivierten NAS- und SAN-Optionen.
+
+. Weisen Sie im Abschnitt *Storage and Optimization* die Speicherkapazität und Performance Service Level und optional die Storage Efficiency Policy für den Workload zu.
++
+Die Spezifikationen für das Performance-Service-Level werden auf den Workload angewendet. Nach dem Erstellen des Workloads werden die Spezifikationen der Richtlinie zur Storage-Effizienz dem Volume und der LUN zugewiesen.
+
+. Aktivieren Sie das Kontrollkästchen *Leistungsgrenzen erzwingen*, wenn Sie den dem Workload zugewiesenen Performance-Service-Level durchsetzen möchten. Durch die Zuweisung eines Performance Service Levels zu einem Workload wird sichergestellt, dass das Aggregat, auf dem der Workload erstellt wird, die im entsprechenden Performance Service Level definierten Performance- und Kapazitätsziele unterstützen kann. Wenn einem Workload z. B. „`Extreme Performance`“ zugewiesen wird, sollte das Aggregat, auf dem der Workload bereitgestellt werden soll, die Performance- und Kapazitätsziele des „Extreme Performance Service Level“ unterstützen, z. B. SSD Storage.
++
+[NOTE]
+====
+Wenn Sie dieses Kontrollkästchen nicht aktivieren, wird der Performance-Service-Level nicht auf den Workload angewendet, und der Status des Workloads im Dashboard wird als nicht zugewiesen angezeigt.
+
+====
+. Wenn Sie eine SMB- und/oder NFS-Dateifreigabe erstellen, wählen Sie die Schaltfläche *NAS*. Diese Schaltfläche ist nur dann zur Auswahl aktiviert, wenn die Speicher-VM die erforderlichen Dienste aktiviert hat.
++
+[NOTE]
+====
+Wenn Ihre SVM sowohl für SMB- als auch für NFS-Services aktiviert ist, können Sie die Schaltflächen *Share by NFS* und *Share by SMB* auswählen und eine Dateifreigabe erstellen, die sowohl NFS- als auch SMB-Protokolle unterstützt. Wenn Sie eine SMB- oder CIFS-Freigabe erstellen möchten, wählen Sie nur die entsprechende Schaltfläche aus.
+
+====
++
+.. Geben Sie bei NFS-Dateifreigaben die IP-Adresse des Hosts oder Netzwerks an, um auf das Dateifreigabvolume zuzugreifen. Sie können kommagetrennte Werte für mehrere Hosts eingeben.
++
+Beim Hinzufügen der Host-IP-Adresse wird eine interne Überprüfung ausgeführt, um die Hostdetails mit der SVM abzustimmen. Außerdem wird die Exportrichtlinie für diesen Host erstellt oder falls eine Richtlinie vorhanden ist, sie wird erneut verwendet. Wenn mehrere NFS Shares für denselben Host erstellt wurden, wird für alle File Shares eine verfügbare Exportrichtlinie für denselben Host mit übereinstimmenden Regeln verwendet. Die Funktion, Regeln für einzelne Richtlinien festzulegen oder Richtlinien neu zu verwenden, indem bestimmte Richtlinienschlüssel bereitgestellt werden, ist verfügbar, wenn Sie die NFS-Freigabe über APIs bereitstellen.
+
+.. Geben Sie bei einer SMB-Freigabe an, welche Benutzer oder Benutzergruppen auf die SMB-Freigabe zugreifen können und weisen Sie die erforderlichen Berechtigungen zu. Für jede Benutzergruppe wird während der Erstellung der Dateifreigabe eine neue Zugriffssteuerungsliste (Access Control List, ACL) generiert.
+
+
+. Wählen Sie zum Erstellen von LUNs die Schaltfläche *SAN* aus. Diese Schaltfläche ist nur dann zur Auswahl aktiviert, wenn die ausgewählte Speicher-VM die erforderlichen Dienste aktiviert hat.
++
+.. Wählen Sie das Host-Betriebssystem aus.
+.. Geben Sie die Host-Zuordnung für die LUN an. Sie können vorhandene Initiatorgruppen zuweisen oder neue Initiatorgruppen definieren und LUNs zuordnen, um zu steuern, welche Initiatoren Zugriff auf LUNs haben.
++
+
+NOTE: Wenn Sie eine neue Initiatorgruppe erstellen während Sie die LUN bereitstellen, müssen Sie bis zum nächsten Erkennungszyklus (bis zu 15 Minuten) warten, um sie für die LUN-Erstellung zu verwenden. Daher wird empfohlen, eine vorhandene Initiatorgruppe aus der Liste der verfügbaren Initiatorgruppen zu verwenden.
+
++
+Wenn Sie eine neue Initiatorgruppe erstellen möchten, wählen Sie die Schaltfläche *Neue Initiatorgruppe erstellen* aus, und geben Sie dann die zum Erstellen der Initiatorgruppe erforderlichen Informationen ein.
+
+
+
+. Klicken Sie Auf *Speichern*.
+
+
+Der Workload wird der Liste der Storage Workloads hinzugefügt.

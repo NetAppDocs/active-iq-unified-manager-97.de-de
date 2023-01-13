@@ -1,0 +1,39 @@
+---
+permalink: reporting/task-downloading-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie können Berichte herunterladen und die Daten als kommagetrennte Datei \(CSV\) oder als PDF-Datei auf einem lokalen oder Netzwerklaufwerk speichern. Sie können CSV-Dateien mit Tabellenkalkulationsanwendungen wie Microsoft Excel und PDF-Dateien mit Lesegeräten wie Adobe Acrobat öffnen.' 
+---
+= Berichte werden heruntergeladen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Berichte herunterladen und die Daten als CSV-Datei (Comma Separated Values) oder als PDF-Datei auf einem lokalen oder Netzwerklaufwerk speichern. Sie können CSV-Dateien mit Tabellenkalkulationsanwendungen wie Microsoft Excel und PDF-Dateien mit Lesegeräten wie Adobe Acrobat öffnen.
+
+
+
+== Schritte
+
+. Klicken Sie Auf image:../media/download-icon.gif[""] So laden Sie den Bericht wie folgt herunter:
++
+|===
+| Wählen | An... 
+
+
+ a| 
+CSV
+ a| 
+Speichern Sie den Bericht als CSV-Datei (kommagetrennte Werte) auf einem lokalen oder einem Netzwerklaufwerk.
+
+
+
+ a| 
+PDF
+ a| 
+Speichern Sie den Bericht als PDF-Datei auf einem lokalen oder einem Netzwerklaufwerk.
+
+|===
+

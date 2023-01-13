@@ -1,0 +1,63 @@
+---
+permalink: online-help/reference-what-ontap-issues-can-unified-manager-fix.html 
+sidebar: sidebar 
+keywords: fix it 
+summary: In dieser Tabelle werden die ONTAP Probleme beschrieben, die Unified Manager direkt über die Benutzeroberfläche von Unified Manager lösen kann, indem Sie auf die Schaltfläche „IT beheben“ klicken. 
+---
+= Welche ONTAP-Probleme können mit Unified Manager behoben werden
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In dieser Tabelle werden die ONTAP Probleme beschrieben, die Unified Manager direkt über die Benutzeroberfläche von Unified Manager lösen kann, indem Sie auf die Schaltfläche *Beheben von Fehlern* klicken.
+
+[cols="1a,1a,1a"]
+|===
+| Name und Beschreibung des Events | Managementaktion | Vorgang „`Fix It`“ 
+
+
+ a| 
+Volume-Speicherplatz Voll
+
+Zeigt an, dass das Volume fast nicht mehr genügend Platz hat und dass es bis zum Kapazitätsschwellenwert nicht mehr erreicht hat. Dieser Schwellenwert ist standardmäßig auf 90 % der Volume-Größe eingestellt.
+ a| 
+Aktivieren Sie Autogrow
+ a| 
+Unified Manager bestimmt, dass Volume Autogrow nicht für dieses Volume konfiguriert ist, also ermöglicht es diese Funktion, damit das Volume als Reaktion auf den belegten Speicherplatz vergrößert oder verkleinert wird.
+
+
+
+ a| 
+Option cf.takeover.on_Panic IST AUS konfiguriert
+
+Die nodeshell Option "`cf.Übernahme.on_panic`" ist auf *aus* eingestellt, was bei HA-konfigurierten Systemen zu einem Problem führen kann.
+ a| 
+Aktivieren Sie die Übernahme in Panikzustand
+ a| 
+Unified Manager sendet den entsprechenden Befehl an den Cluster, um diese Einstellung in *ein* zu ändern.
+
+
+
+ a| 
+Deaktivieren Sie die nodeshell Option snapmirror.enable
+
+Die alte nodeshell Option "`snapmirror.enable`" ist auf *ein* eingestellt, was beim Booten nach dem Upgrade auf ONTAP 9.3 oder höher zu einem Problem führen könnte.
+ a| 
+Setzen Sie die option snapmirror.enable auf aus
+ a| 
+Unified Manager sendet den entsprechenden Befehl an den Cluster, um diese Einstellung in *aus* zu ändern.
+
+
+
+ a| 
+Telnet ist aktiviert
+
+Weist auf ein potenzielles Sicherheitsproblem hin, da Telnet unsicher ist und Daten unverschlüsselt weiterleitet.
+ a| 
+Deaktivieren Sie Telnet
+ a| 
+Unified Manager sendet den folgenden Befehl an das Cluster, um Telnet zu deaktivieren: `security protocol modify -application telnet -enabled false`
+
+|===

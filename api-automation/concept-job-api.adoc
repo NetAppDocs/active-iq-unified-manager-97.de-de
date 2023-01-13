@@ -1,0 +1,38 @@
+---
+permalink: api-automation/concept-job-api.html 
+sidebar: sidebar 
+keywords:  
+summary: Im Active IQ Unified Manager werden Vorgänge wie das Hinzufügen und Ändern von Ressourcen durch synchrone und asynchrone API-Aufrufe durchgeführt. Aufrufe, die für die asynchrone Ausführung geplant sind, können von einem für diesen Aufruf erstellten Jobobjekt nachverfolgt werden. Jedes Jobobjekt verfügt über einen eindeutigen Schlüssel zur Identifizierung. Jedes Job-Objekt gibt die Job-Objekt-URI zurück, mit der Sie auf den Fortschritt des Jobs zugreifen und diesen verfolgen können. Sie können diese API zum Abrufen der Details jeder Ausführung verwenden. 
+---
+= Anzeigen Von Jobs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Im Active IQ Unified Manager werden Vorgänge wie das Hinzufügen und Ändern von Ressourcen durch synchrone und asynchrone API-Aufrufe durchgeführt. Aufrufe, die für die asynchrone Ausführung geplant sind, können von einem für diesen Aufruf erstellten Jobobjekt nachverfolgt werden. Jedes Jobobjekt verfügt über einen eindeutigen Schlüssel zur Identifizierung. Jedes Job-Objekt gibt die Job-Objekt-URI zurück, mit der Sie auf den Fortschritt des Jobs zugreifen und diesen verfolgen können. Sie können diese API zum Abrufen der Details jeder Ausführung verwenden.
+
+Sie können alle Job-Objekte abfragen. Sie können auch die Job Key- und Job-Objektdetails verwenden, um die nächsten Vorgänge für die Ressourcen auszuführen.
+
+
+
+== Jobs anzeigen
+
+Sie können diese Methode verwenden, um eine Liste aller Jobs zu erhalten. Der Antwortkörper besteht aus den Jobdetails aller Jobs. Sie können die Details eines bestimmten Job-Objekts auch anzeigen, indem Sie den Job-Schlüssel in der URI angeben. Der Antwortkörper besteht aus den Details, die durch die Taste Job identifiziert werden. In der Antwort wird das neueste Jobobjekt an die Spitze zurückgegeben. Wenn Sie ein bestimmtes Jobobjekt abfragen möchten, geben Sie die Job-ID des Jobs ein.
+
+[cols="1a,1a,1a"]
+|===
+| Kategorie | HTTP-Verb | Pfad 
+
+
+ a| 
+Management-Server
+ a| 
+GET
+ a| 
+`/management-server/jobs`
+
+`+/management-server/jobs/{key}+`
+
+|===

@@ -1,0 +1,58 @@
+---
+permalink: online-help/task-scheduling-a-report.html 
+sidebar: sidebar 
+keywords: sample report schedule 
+summary: Wenn Sie über eine Ansicht verfügen, die Sie für die regelmäßige Erstellung und Verteilung als Bericht planen möchten, können Sie den Bericht planen. 
+---
+= Planen eines Berichts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie über eine Ansicht verfügen, die Sie für die regelmäßige Erstellung und Verteilung als Bericht planen möchten, können Sie den Bericht planen.
+
+
+
+== Bevor Sie beginnen
+
+* Sie müssen über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+* Sie müssen die SMTP-Servereinstellungen auf der Seite *Allgemein* > *Benachrichtigungen* konfiguriert haben, damit die Reporting-Engine Berichte als E-Mail-Anhänge an die Empfängerliste des Unified Manager-Servers senden kann.
+* Der E-Mail-Server muss so konfiguriert sein, dass Anhänge mit den generierten E-Mails gesendet werden können.
+
+
+
+
+== Über diese Aufgabe
+
+Führen Sie die folgenden Schritte aus, um einen Bericht für eine Ansicht zu testen und zu planen. Wählen Sie die gewünschte Ansicht aus oder passen Sie sie an. Im folgenden Verfahren wird eine Netzwerkansicht verwendet, die die Leistung Ihrer Netzwerkschnittstellen zeigt, aber Sie können jede beliebige Ansicht verwenden.
+
+
+
+== Schritte
+
+. Öffnen Sie Ihre Ansicht. Dieses Beispiel verwendet die Standardansicht, die die LIF-Performance zeigt. Klicken Sie im linken Navigationsbereich auf**Netzwerk** > *Netzwerkschnittstellen*.
+. Passen Sie die Ansicht nach Bedarf an.
+. Nachdem Sie die Ansicht angepasst haben, können Sie im Feld *Ansicht* einen eindeutigen Namen angeben und auf das Häkchen klicken, um sie zu speichern.
++
+image::../media/view-save.gif[Anzeige speichern]
+
+. Laden Sie den Bericht als *CSV*- oder *PDF*-Datei herunter, um die Ausgabe zu sehen, bevor Sie sie planen oder freigeben.
++
+Öffnen Sie die Datei mit einer installierten Anwendung, z. B. Microsoft Excel (CSV) oder Adobe Acrobat (PDF).
+
+. Wenn Sie mit dem Bericht zufrieden sind, klicken Sie auf *geplante Berichte*.
+. Klicken Sie auf der Seite *Berichtspläne* auf *Zeitplan hinzufügen*.
+. Akzeptieren Sie den Standardnamen, der eine Kombination aus dem Ansichtsnamen und der Frequenz ist, oder passen Sie den *Terminplannamen* an.
+. Um den geplanten Bericht zum ersten Mal zu testen, fügen Sie sich nur als *Empfänger* hinzu. Wenn Sie zufrieden sind, fügen Sie die E-Mail-Adressen für alle Berichtsempfänger hinzu.
+. Geben Sie die Häufigkeit an, entweder *Daily* oder *Weekly*, und den Tag, wenn wöchentlich, und die Uhrzeit, zu der der Bericht generiert und an die Empfänger verteilt werden soll.
+. Wählen Sie das Format aus, entweder *PDF* oder *CSV*.
+. Klicken Sie auf das Häkchen, um den Berichtsplan zu speichern.
++
+image::../media/scheduled-reports.gif[Geplante Berichte]
+
++
+Der Bericht wird sofort als Test gesendet. Danach wird der Bericht generiert und per E-Mail an die Empfänger gesendet, die unter der angegebenen Häufigkeit aufgeführt sind.
+
+

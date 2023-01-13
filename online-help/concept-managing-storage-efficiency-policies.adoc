@@ -1,0 +1,84 @@
+---
+permalink: online-help/concept-managing-storage-efficiency-policies.html 
+sidebar: sidebar 
+keywords: add 
+summary: 'Mit einer Storage-Effizienz-Richtlinie \ (SEP\) können Sie die Storage-Effizienz-Merkmale eines Workloads definieren. Sie können einem Workload beim ersten Erstellen des Workloads eine Storage-Effizienzrichtlinie zuweisen oder diesen anschließend durch Bearbeiten des Workloads bearbeiten.' 
+---
+= Management Von Richtlinien Zur Storage-Effizienz
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit einer Storage-Effizienz-Richtlinie (SEP) können Sie die Storage-Effizienz-Merkmale eines Workloads definieren. Sie können einem Workload beim ersten Erstellen des Workloads eine Storage-Effizienzrichtlinie zuweisen oder diesen anschließend durch Bearbeiten des Workloads bearbeiten.
+
+Storage-Effizienz beinhaltet Technologien wie Thin Provisioning, Deduplizierung und Datenkomprimierung, die die Storage-Auslastung erhöhen und die Storage-Kosten senken. Während Sie Storage-Effizienz-Richtlinien erstellen, können Sie diese platzsparenden Technologien entweder einzeln oder gemeinsam verwenden, um eine maximale Storage-Effizienz zu erzielen. Wenn Sie die Richtlinien Ihren Storage-Workloads zuordnen, werden ihnen die angegebenen Richtlinieneinstellungen zugewiesen. Mit Unified Manager können Sie systemdefinierte und benutzerdefinierte Storage-Effizienzrichtlinien zuweisen, um die Storage-Ressourcen im Datacenter zu optimieren.
+
+Unified Manager bietet zwei systemdefinierte Storage-Effizienz-Richtlinien: Hoch und niedrig. Diese SEPs gelten für die meisten Storage-Workloads in einem Datacenter. Sie können jedoch eigene Richtlinien erstellen, wenn die systemdefinierten SEPs Ihre Anforderungen nicht erfüllen.
+
+Sie können eine Storage-Effizienz-Richtlinie, die systemdefiniert ist oder der derzeit einem Workload zugewiesen ist, nicht ändern. Sie können eine Richtlinie zur Storage-Effizienz, die einem Workload zugewiesen ist, oder nicht löschen, wenn diese Richtlinie die einzige verfügbare Richtlinie zur Storage-Effizienz ist.
+
+Auf der Seite Storage Efficiency Policies werden die verfügbaren Storage Efficiency Policies aufgeführt und Sie können SEPs anpassen, bearbeiten und löschen. Auf dieser Seite werden die folgenden Informationen angezeigt:
+
+[cols="1a,1a"]
+|===
+| Feld | Beschreibung 
+
+
+ a| 
+Name
+ a| 
+Name der Storage-Effizienz-Richtlinie
+
+
+
+ a| 
+Typ
+ a| 
+Gibt an, ob die Richtlinie systemdefiniert oder benutzerdefiniert ist.
+
+
+
+ a| 
+Space Reserve
+ a| 
+Gibt an, ob es sich um Thin Provisioning oder Thick Provisioning für das Volume handelt:
+
+
+
+ a| 
+Deduplizierung
+ a| 
+Gibt an, ob die Deduplizierung für das Volume aktiviert ist:
+
+* `Inline`: Deduplizierung findet statt, während sie auf das Volumen geschrieben werden
+* `Background`: Deduplizierung tritt im Hintergrund auf
+* `Disable`: Deduplizierung ist auf dem Volumen deaktiviert
+
+
+
+
+ a| 
+Komprimierung
+ a| 
+Gibt an, ob die Datenkomprimierung für das Volume aktiviert ist:
+
+* `Inline`: Die Datenkomprimierung tritt während des Verschreibens auf das Volume auf
+* `Background`: Die Datenkomprimierung erfolgt im Hintergrund
+* `Disable`: Die Datenkomprimierung ist auf dem Volumen deaktiviert
+
+
+
+
+ a| 
+Workloads
+ a| 
+Anzahl der Storage Workloads, denen die Storage-Effizienz-Richtlinie zugewiesen wurde
+
+|===
+
+
+== Richtlinien zum Erstellen einer individuellen Richtlinie zur Storage-Effizienz
+
+Wenn die vorhandenen Storage-Effizienzrichtlinien die Richtlinienanforderungen für Ihre Storage-Workloads nicht erfüllen, können Sie eine individuelle Storage-Effizienzrichtlinie erstellen. Es wird jedoch empfohlen, die von Ihnen definierten Storage-Effizienzrichtlinien für Ihre Storage Workloads zu verwenden und bei Bedarf nur benutzerdefinierte Storage-Effizienzrichtlinien zu erstellen.

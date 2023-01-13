@@ -1,0 +1,18 @@
+---
+permalink: api-automation/reference-upgrading-qos-to-aqos.html 
+sidebar: sidebar 
+keywords: Upgrading 
+summary: 'Active IQ Unified Manager unterstützt sowohl herkömmliche QoS als auch anpassungsfähige QoS \(AQoS\), die mit den von Unified Manager gemanagten Storage-Workloads verbunden sind.' 
+---
+= Änderung von Workloads für das Upgrade von QoS auf AQoS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager unterstützt sowohl herkömmliche QoS als auch AQoS (Adaptive QoS), die den von Unified Manager gemanagten Storage-Workloads zugeordnet sind.
+
+Wenn Sie Ihre ONTAP-Cluster von 9.1 auf 9.3 (für Dateifreigaben) und 9.4 (für LUNs) aktualisieren, können Sie die traditionelle QoS der jeweiligen von Unified Manager verwalteten Workloads auf AQoS aktualisieren. Weitere Informationen finden Sie unter
+
+https://kb.netapp.com/app/answers/answer_view/a_id/1087379["Upgrade von durch Unified Manager gemanagten Workloads nach einem Cluster-Upgrade von herkömmlicher QoS auf AQoS"]

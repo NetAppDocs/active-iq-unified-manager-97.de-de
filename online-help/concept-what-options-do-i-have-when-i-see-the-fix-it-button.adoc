@@ -1,0 +1,52 @@
+---
+permalink: online-help/concept-what-options-do-i-have-when-i-see-the-fix-it-button.html 
+sidebar: sidebar 
+keywords: fix it 
+summary: Über die Schaltfläche „Beheben von“ können Sie ein Problem beheben, über das Unified Manager über ein Ereignis benachrichtigt wurde. 
+---
+= Welche Optionen habe ich, wenn ich die Schaltfläche „Fix it“ sehe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der Schaltfläche *Fix IT* können Sie ein Problem beheben, über das Unified Manager über ein Ereignis benachrichtigt wurde.
+
+Wir empfehlen, dass Sie auf die Schaltfläche *Fix IT* klicken, um das Problem zu beheben, sobald es verfügbar ist. Wenn Sie jedoch nicht sicher sind, dass Sie das Problem wie von Unified Manager empfohlen lösen möchten, können Sie die folgenden Aktionen durchführen:
+
+[cols="1a,1a"]
+|===
+| Was möchten Sie tun? | Aktion 
+
+
+ a| 
+Lassen Sie das Problem mit Unified Manager beheben.
+ a| 
+Klicken Sie auf die Schaltfläche *Fix it*.
+
+
+
+ a| 
+Beheben Sie das Problem derzeit nicht, und verbergen Sie diese Verwaltungsaktion.
+ a| 
+Klicken Sie auf den Abwärtspfeil und klicken Sie auf *Abweisen*.
+
+
+
+ a| 
+Zeigen Sie die Details für dieses Ereignis an, damit Sie das Problem besser verstehen können.
+ a| 
+Klicken Sie auf den Abwärtspfeil und klicken Sie auf *Ereignisdetails anzeigen*, um die Seite Ereignisdetails anzuzeigen.
+
+
+
+ a| 
+Zeigen Sie die Details für dieses Speicherobjekt an, damit Sie das Problem besser verstehen.
+ a| 
+Klicken Sie auf den Namen des Speicherobjekts, um Details auf der Seite Performance Explorer oder Health Details anzuzeigen.
+
+|===
+Bevor Sie auf die Schaltfläche *Fix it* klicken, sollten Sie den Objektnamen notieren (z. B. „`Cluster fas8040-206`“ oder „`Volume phil_DB`“). Damit Sie die Liste der Ereignisse später überprüfen können, um zu überprüfen, ob das entsprechende Ereignis im Status veraltet ist, was bedeutet, dass der Fix erfolgreich war.
+
+In einigen Fällen wird der Fix in der nächsten 15-minütigen Konfigurationsabfrage reflektiert. In anderen Fällen kann es bis zu 24 Stunden dauern, bis die Konfigurationsänderung überprüft und das Ereignis veraltet ist.

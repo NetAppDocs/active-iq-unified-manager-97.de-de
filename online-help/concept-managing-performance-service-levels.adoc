@@ -1,0 +1,218 @@
+---
+permalink: online-help/concept-managing-performance-service-levels.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit einem Performance Service Level können Sie die Performance- und Storage-Ziele für einen Workload definieren. Sie können einem Workload beim ersten Erstellen des Workloads ein Performance-Service-Level zuweisen oder anschließend den Workload bearbeiten. 
+---
+= Managen Von Performance Service Levels
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit einem Performance Service Level können Sie die Performance- und Storage-Ziele für einen Workload definieren. Sie können einem Workload beim ersten Erstellen des Workloads ein Performance-Service-Level zuweisen oder anschließend den Workload bearbeiten.
+
+Das Management und die Überwachung von Storage-Ressourcen basieren auf Service Level Objectives (SLOs). Sie werden über Service-Level-Agreements definiert, die auf Performance und Kapazität basieren. In Unified Manager beziehen sich SLOs auf die Performance Service Level-Definitionen der Applikationen, die auf NetApp Storage ausgeführt werden. Storage-Services werden nach der Performance und Auslastung der zugrunde liegenden Ressourcen differenziert. Ein Performance Service Level ist eine Beschreibung der Storage-Service-Ziele. Ein Performance Service Level ermöglicht es dem Storage-Provider, die Performance- und Kapazitätsziele für den Workload festzulegen.
+
+Unified Manager bietet einige vordefinierte (oder vorgefertigte) Performance-Service-Level: Höchste Performance, Performance und Mehrwert. Die Service-Level für extreme Performance, Performance und Mehrwert sind für die meisten gängigen Storage-Workloads im Datacenter anwendbar. Unified Manager bietet außerdem drei Performance-Service-Level für Datenbankapplikationen: Extreme für Datenbankprotokolle, Extreme für gemeinsam genutzte Datenbanken und Extreme für Datenbankdaten. Diese extrem hochperformanten Service-Level unterstützen sprunghafte IOPS und eignen sich für Datenbankapplikationen mit höchsten Durchsatzanforderungen. Wenn diese vordefinierten Performance-Service-Level Ihre Anforderungen nicht erfüllen, können Sie neue Performance-Service-Level basierend auf der Definition der vordefinierten Performance-Service-Level erstellen.
+
+Sie können über die Seite *Richtlinien* > *Performance Service Levels* und über die APIs des Speicheranbieters auf die Performance Service Levels zugreifen. Das Managen von Storage-Workloads durch die Zuweisung von Performance-Service-Leveln ist praktisch, da Sie keine Storage-Workloads einzeln managen müssen. Alle Änderungen können auch gemanagt werden, indem ein anderes Performance Service Level neu zugewiesen wird, anstatt sie einzeln zu verwalten.
+
+Ein Performance-Service-Level, der systemdefiniert ist oder der derzeit einem Workload zugewiesen ist, kann nicht geändert werden. Eine PSL, die einem Workload zugewiesen ist, kann nicht gelöscht werden, oder es ist der einzige verfügbare Service-Level für die Leistung.
+
+Auf der Seite Performance Service Levels werden die verfügbaren Richtlinien für Performance Service Level aufgelistet und Sie können sie hinzufügen, bearbeiten und löschen. Auf dieser Seite werden die folgenden Informationen angezeigt:
+
+[cols="1a,1a"]
+|===
+| Feld | Beschreibung 
+
+
+ a| 
+Name
+ a| 
+Name des Service-Levels der Leistung.
+
+
+
+ a| 
+Typ
+ a| 
+Gibt an, ob die Richtlinie systemdefiniert oder benutzerdefiniert ist.
+
+
+
+ a| 
+IOPS erwartet
+ a| 
+Mindestanzahl an IOPS, die eine Applikation für ein LUN oder File-Share durchführen soll Der erwartete IOPS gibt die erwarteten IOPS-Minimum an, die basierend auf der zugewiesenen Storage-Objektgröße zugewiesen wurden.
+
+
+
+ a| 
+IOPS-Spitzenwert
+ a| 
+Maximale Anzahl an IOPS, die eine Applikation für ein LUN oder File Share durchführen kann IOPS-Maximum gibt die maximal möglichen IOPS an, die zugewiesen werden. Diese Angabe basiert auf der zugewiesenen Größe des Storage-Objekts oder der verwendeten Größe des Storage-Objekts.
+
+IOPS-Spitzenlasten basieren auf einer Zuweisungsrichtlinie. Die Zuweisungsrichtlinie ist entweder zugewiesener Speicherplatz oder belegter Speicherplatz. Wenn die Zuweisungsrichtlinie auf zugewiesenen Speicherplatz festgelegt ist, wird die IOPS-Spitzenwert basierend auf der Größe des Storage-Objekts berechnet. Wenn die Zuweisungsrichtlinie auf usbelegten Speicherplatz festgelegt wird, wird die IOPS-Spitzenwert unter Berücksichtigung der Storage-Effizienz basierend auf der Datenmenge berechnet, die im Storage-Objekt gespeichert ist. Standardmäßig ist die Zuordnungsrichtlinie auf used-space festgelegt.
+
+
+
+ a| 
+Absolutes IOPS-Minimum
+ a| 
+Das absolute IOPS-Minimum, das als Überschreiben verwendet wird, wenn die erwarteten IOPS kleiner sind als dieser Wert. Der Wert kann zwischen 400 und 1000 liegen. Der Bereich des absoluten MindestIOPS-Werts berechnet sich wie folgt:
+
+Mindestwert = 1000/ erwartete Latenz
+
+Die Standardwerte der vom System definierten Performance-Service-Level werden wie folgt berechnet:
+
+* Extreme Performance: Falls IOPS >= 6144/TB erwartet werden, dann absolute Minimum-IOPS = 1000
+* Performance: Falls erwartete IOPS >= 2048/TB und < 6144/TB, dann absolutes Minimum IOPS = 500
+* Wert: Falls erwartete IOPS >= 128/TB und < 2048/TB, dann absolutes Minimum IOPS = 75
+
+
+Die Standardwerte der systemdefinierten Datenbank-Performance-Service-Level werden wie folgt berechnet:
+
+* Extreme für Datenbank-Logs: Wenn IOPS >= 22528 erwartet werden, dann absolute Minimum IOPS = 4000
+* Extreme für gemeinsam genutzte Datenbank-Daten: Wenn erwartete IOPS >= 16384, dann absolute Minimum IOPS = 2000
+* Extreme für Datenbankdaten: Wenn IOPS erwartet werden >= 12288, dann absolute Minimum IOPS = 2000
+
+
+
+
+ a| 
+Erwartete Latenz
+ a| 
+Erwartete Latenz für Storage-IOPS in Millisekunden pro Vorgang (ms/op)
+
+
+
+ a| 
+Kapazität
+ a| 
+Verfügbare und genutzte Gesamtkapazität in den Clustern.
+
+
+
+ a| 
+Workloads
+ a| 
+Anzahl an Storage-Workloads, denen das Performance Service Level zugewiesen wurde.
+
+|===
+Beachten Sie, dass bei Workloads, die den erwarteten Latenzwert für 30 % der Zeit während der vorherigen Stunde überschreiten, dass Unified Manager eines der folgenden Ereignisse generiert, um Sie über ein potenzielles Performance-Problem zu informieren: „`Workload Volume Latency Threshold Indered as defined by Performance Service Level Policy`“ oder „`Workload LUN Latency Threshold Indered by Performance Service Level Policy`“.
+
+Die folgende Tabelle enthält Informationen zu systemdefinierten Performance-Service-Levels:
+
+[cols="1a,1a,1a,1a,1a,1a"]
+|===
+| Performance Service Level | Beschreibung und Anwendungsfall | Erwartete Latenz (ms/OP) | IOPS-Spitzenwert | IOPS erwartet | Absolutes IOPS-Minimum 
+
+
+ a| 
+Höchste Performance
+ a| 
+Sorgt für einen extrem hohen Durchsatz bei sehr niedriger Latenz
+
+Ideal für latenzkritische Applikationen
+ a| 
+1
+ a| 
+12288
+ a| 
+6144
+ a| 
+1000
+
+
+
+ a| 
+Leistung
+ a| 
+Hoher Durchsatz bei niedriger Latenz
+
+Ideal für Datenbanken und virtualisierte Applikationen
+ a| 
+2
+ a| 
+4096
+ a| 
+2048
+ a| 
+500
+
+
+
+ a| 
+Wert
+ a| 
+Bietet hohe Storage-Kapazität und mittlerer Latenz
+
+Ideal für Applikationen mit hoher Kapazität wie E-Mail, Web-Inhalte, Dateifreigaben und Backup-Ziele
+ a| 
+17
+ a| 
+512
+ a| 
+128
+ a| 
+75
+
+
+
+ a| 
+Extreme für Datenbank-Logs
+ a| 
+Bietet maximalen Durchsatz bei geringster Latenz.
+
+Ideal für Datenbankapplikationen, die Datenbankprotokolle unterstützen Diese PSL bietet den höchsten Durchsatz, da Datenbankprotokolle extrem sprunghafte Anstiege bieten und die Protokollierung ständig erforderlich ist.
+ a| 
+1
+ a| 
+45056
+ a| 
+22528
+ a| 
+4000
+
+
+
+ a| 
+Extreme für gemeinsam genutzte Datenbank-Daten
+ a| 
+Sehr hoher Durchsatz bei geringster Latenz.
+
+Ideal für Daten von Datenbankapplikationen, die in einem gemeinsamen Datenspeicher gespeichert, aber datenbankübergreifend verwendet werden
+ a| 
+1
+ a| 
+32768
+ a| 
+16384
+ a| 
+2000
+
+
+
+ a| 
+Extreme für Datenbankdaten
+ a| 
+Bietet hohen Durchsatz bei geringster Latenz.
+
+Ideal für Daten von Datenbankapplikationen, z. B. Datenbanktabellen und Metadaten
+ a| 
+1
+ a| 
+24576
+ a| 
+12288
+ a| 
+2000
+
+|===
+
+
+== Richtlinien zum Erstellen eines benutzerdefinierten Service-Levels für die Leistung
+
+Wenn die vorhandenen Performance-Service-Level die SLO-Anforderungen (Service Level Objective) für Storage-Workloads nicht erfüllen, können Sie ein maßgeschneidertes Performance-Service-Level erstellen. Es wird jedoch empfohlen, die vom System definierten Performance-Service-Level für Ihre Storage-Workloads zu verwenden und bei Bedarf nur benutzerdefinierte Performance-Service-Level zu erstellen.

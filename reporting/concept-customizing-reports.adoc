@@ -1,0 +1,22 @@
+---
+permalink: reporting/concept-customizing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Ansichten auf verschiedene Weise anpassen, um einen Bericht zu erstellen, der alle für das Management Ihrer ONTAP Cluster erforderlichen Informationen enthält. 
+---
+= Anpassen von Berichten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Ansichten auf verschiedene Weise anpassen, um einen Bericht zu erstellen, der alle für das Management Ihrer ONTAP Cluster erforderlichen Informationen enthält.
+
+Beginnen Sie mit einer Standardinventarseite oder einer benutzerdefinierten Ansicht, und passen Sie sie an, indem Sie Spalten hinzufügen oder entfernen, die Spaltenreihenfolge ändern, die Daten filtern oder eine bestimmte Spalte in aufsteigender oder absteigender Reihenfolge sortieren.
+
+[NOTE]
+====
+Zum Verwalten von Berichten müssen Sie über die Rolle „Anwendungsadministrator“ oder „Speicheradministrator“ verfügen.
+
+====

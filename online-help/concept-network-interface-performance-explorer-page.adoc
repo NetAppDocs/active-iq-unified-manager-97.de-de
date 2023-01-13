@@ -1,0 +1,32 @@
+---
+permalink: online-help/concept-network-interface-performance-explorer-page.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Seite „Performance/Network Interface Explorer“ bietet eine detaillierte Performance-Übersicht für alle LIFs innerhalb eines Clusters. 
+---
+= Seite „Performance/Network Interface Explorer“
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Seite „Performance/Network Interface Explorer“ bietet eine detaillierte Performance-Übersicht für alle LIFs innerhalb eines Clusters.
+
+Auf der Seite „Performance/Network Interface Explorer“ können Sie die LIF-Performance während eines bestimmten Zeitraums verfolgen und vergleichen. So lassen sich Fehler beheben und die LIF-Performance präzise optimieren.
+
+Mit der Funktion „Ansicht und Vergleich“ können Sie die Leistung dieser Netzwerkschnittstelle mit vergleichen:
+
+* Andere LIFs, die sich am gleichen Port befinden
+* Andere LIFs auf derselben SVM
+* Der Port, auf dem sich das LIF befindet
+* Der SVM, auf der sich das LIF befindet
+
+
+Auf der Seite „Performance/Network Interface Explorer“ können Sie:
+
+* Zeigen Sie Probleme mit Schwellenwerten und deren Details an
+* Nachverfolgung und Vergleich der LIF-Performance-Daten
+* Untersuchung und Behebung von Problemen mit Schwellenwerten
+* Untersuchung und Behebung von Performance-Problemen
+
