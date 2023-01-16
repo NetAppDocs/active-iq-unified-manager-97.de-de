@@ -40,7 +40,7 @@ entries:
     - title: Rückkehrschutzbeziehungen auf der Seite Volume/Health Details
       url: "/data-protection/task-reversing-protection-relationships-from-the-health-volume-details-page.html"
     - title: Entfernen einer Schutzbeziehung von der Seite Volume / Health Details
-      url: "/data-protection/.html"
+      url: "/data-protection/task-removing-a-protection-relationship-from-the-health-volume-details-page.html"
     - title: Sicherungsbeziehungen von der Seite Volume / Health Details neu synchronisieren
       url: "/data-protection/task-resynchronizing-protection-relationships-from-the-health-volume-details-page.html"
   - title: Behebung eines Schutzauftrags

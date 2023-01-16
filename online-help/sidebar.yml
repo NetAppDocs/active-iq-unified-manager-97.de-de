@@ -1483,5 +1483,3 @@ entries:
     url: "/online-help/reference-user-not-found.html"
   - title: Problem beim Hinzufügen von LDAP über andere Authentifizierungsdienste
     url: "/online-help/reference-issue-with-adding-ldap-using-other-authentication-services.html"
-- title: So senden Sie Kommentare zu Dokumentation und erhalten Update-Benachrichtigungen
-  url: "/online-help/concept-how-to-send-comments-about-documentation-and-receive-update-notifications-netapp-post-preface.html"
