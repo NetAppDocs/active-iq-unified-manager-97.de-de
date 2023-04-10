@@ -21,7 +21,7 @@ Sie müssen verschiedene Schritte durchführen, um Unified Manager und OnCommand
 * Es müssen Peer-Beziehungen zwischen zwei Clustern oder zwei Storage Virtual Machines (SVMs) hergestellt werden.
 * OnCommand Workflow Automation muss in Unified Manager integriert werden:
 +
-** link:task-configuring-a-connection-between-workflow-automation-and-unified-manager.adoc["OnCommand Workflow Automation einrichten"]
+** link:task-configuring-a-connection-between-workflow-automation-and-unified-manager.html["OnCommand Workflow Automation einrichten"]
 ** xref:task-verifying-unified-manager-data-source-caching-in-workflow-automation.adoc[Überprüfen des Quellcaches von Unified Manager in Workflow Automation]
 
 
@@ -34,7 +34,7 @@ Sie müssen verschiedene Schritte durchführen, um Unified Manager und OnCommand
 . Führen Sie je nach Art der Schutzbeziehung einen der folgenden Schritte aus:
 +
 ** xref:task-creating-a-snapmirror-protection-relationship-from-the-health-volume-details-page.adoc[SnapMirror Sicherungsbeziehung erstellen].
-** link:task-creating-a-snapvault-protection-relationship-from-the-health-volume-details-page.adoc["SnapVault Sicherungsbeziehung erstellen"].
+** link:task-creating-a-snapvault-protection-relationship-from-the-health-volume-details-page.html["SnapVault Sicherungsbeziehung erstellen"].
 
 
 . Wenn Sie je nach Art der Beziehung eine Richtlinie für die Beziehung erstellen möchten, führen Sie einen der folgenden Schritte aus:

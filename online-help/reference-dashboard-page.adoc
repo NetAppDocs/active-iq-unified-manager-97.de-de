@@ -27,7 +27,7 @@ Einige der unten aufgeführten Felder werden möglicherweise nicht auf der Seite
 Es gibt bestimmte Probleme, die Unified Manager sorgfältig analysieren und eine singuläre Lösung anbieten kann. Wenn verfügbar, werden diese Auflösungen in diesem Fenster mit der Schaltfläche *Fix IT* angezeigt. Diese Probleme können Sie sofort von Unified Manager beheben, anstatt ONTAP System Manager oder die ONTAP CLI zu verwenden.
 
 +
-Siehe link:concept-fixing-ontap-issues-directly-from-unified-manager.adoc["Behebung von ONTAP Problemen direkt über Unified Manager"] Finden Sie weitere Informationen.
+Siehe link:concept-fixing-ontap-issues-directly-from-unified-manager.html["Behebung von ONTAP Problemen direkt über Unified Manager"] Finden Sie weitere Informationen.
 
 * *Kapazität Panel*
 +

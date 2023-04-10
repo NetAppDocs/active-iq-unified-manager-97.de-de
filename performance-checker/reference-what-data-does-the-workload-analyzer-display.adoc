@@ -43,7 +43,7 @@ Zeigt Diagramme für Latenz, Durchsatz (sowohl IOPS als auch MB/s) und Auslastun
 +
 ** *Latenz* zeigt die Latenz für den Workload an. Das Diagramm enthält drei Ansichten, mit denen Sie die gesamte Latenz, die Latenz, aufgeschlüsselt nach „Lesen“, „Schreiben“ und „anderen Prozessen“ sowie die nach Cluster-Komponente durchbrochene Latenz sehen können.
 +
-Siehe link:concept-cluster-components-and-why-they-can-be-in-contention.adoc["Cluster-Komponenten und warum sie über Konflikte verfügen können"] Eine Beschreibung der hier angezeigten Cluster-Komponenten.
+Siehe link:concept-cluster-components-and-why-they-can-be-in-contention.html["Cluster-Komponenten und warum sie über Konflikte verfügen können"] Eine Beschreibung der hier angezeigten Cluster-Komponenten.
 
 ** *Throughput* zeigt IOPS und MB/s Durchsatz für den Workload an. Das Diagramm verfügt über zwei Ansichten, mit denen Sie den Gesamtdurchsatz und den Durchsatz, der durch Lesen, Schreiben und andere Prozesse aufgeschlüsselt wird, anzeigen können.
 +

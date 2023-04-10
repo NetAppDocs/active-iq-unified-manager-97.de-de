@@ -18,7 +18,7 @@ summary: Kurzanleitung für Unified Manager auf VMware vSphere Plattform.
 * Freier Speicherplatz: 5 GB (Thin Provisioning), 152 GB (Thick Provisioning)
 
 
-Detaillierte Systemanforderungen finden Sie im link:./install-vapp/concept-requirements-for-installing-unified-manager.html["Anforderungen für die Installation von Unified Manager"] Und link:http://mysupport.netapp.com/matrix["Interoperabilitätsmatrix"].
+Detaillierte Systemanforderungen finden Sie im link:concept-requirements-for-installing-unified-manager.html["Anforderungen für die Installation von Unified Manager"] Und link:http://mysupport.netapp.com/matrix["Interoperabilitätsmatrix"].
 
 
 

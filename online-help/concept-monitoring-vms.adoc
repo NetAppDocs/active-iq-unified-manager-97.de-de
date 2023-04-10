@@ -56,7 +56,7 @@ VCenter Server ermöglichen Sonderzeichen (z. B. %, &, *, €, #, @, !, \, /, :,
 . Klicken Sie auf den nach-unten-Pfeil neben der VM, um eine zusammenfassende Ansicht der Topologie der Komponenten auf Computing-, Netzwerk- und Storage-Ebenen anzuzeigen. Der Node mit Latenzproblemen ist hervorgehoben. Die Zusammenfassung zeigt die schlechteste Latenz der Komponenten an. Wenn eine VM beispielsweise mehr als ein virtuelles Laufwerk hat, zeigt diese Ansicht das virtuelle Laufwerk an, das die schlechteste Latenz aller virtuellen Laufwerke hat.
 . Um die Latenz und den Durchsatz des Datastore über einen bestimmten Zeitraum zu analysieren, klicken Sie oben im Datastore-Objektsymbol auf die Schaltfläche *Workload Analyzer*. Sie rufen die Seite Workload Analysis auf. Dort können Sie einen Zeitbereich auswählen und die Performance-Diagramme des Datastores anzeigen. Weitere Informationen zur Workload-Analyse finden Sie unter _Fehlerbehebung von Workloads mithilfe des Workload Analyzer_.
 +
-link:concept-troubleshooting-workloads-using-the-workload-analyzer.adoc["Fehlersuche bei Workloads mithilfe der Workload Analyzer"]
+link:concept-troubleshooting-workloads-using-the-workload-analyzer.html["Fehlersuche bei Workloads mithilfe der Workload Analyzer"]
 
 
 

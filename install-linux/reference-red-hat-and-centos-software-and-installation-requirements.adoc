@@ -74,7 +74,7 @@ Informationen zum Red hat Subscription Manager finden Sie in der Red hat Dokumen
 Wenn das EPEL-Repository auf Ihrem System nicht konfiguriert ist, müssen Sie das Repository manuell herunterladen und konfigurieren.
 
 +
-link:task-manually-configuring-the-epel-repository.adoc["Manuelles Konfigurieren des EPEL-Repositorys"]
+link:task-manually-configuring-the-epel-repository.html["Manuelles Konfigurieren des EPEL-Repositorys"]
 
 * Wenn die korrekte Version von MySQL nicht installiert ist, müssen Sie das MySQL-Repository aktivieren, damit die MySQL-Software auf Ihrem System erfolgreich installiert werden kann.
 +

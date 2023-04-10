@@ -34,7 +34,7 @@ Mehr Zeit wird bei der ersten Durchführung eines Backups als bei nachfolgenden 
 
 [NOTE]
 ====
-Wenn Sie feststellen, dass die Anzahl der inkrementellen Backup-Dateien für den Speicherplatz, den Sie für Backups zugewiesen haben, zu groß wird, lesen Sie https://kb.netapp.com/app/answers/answer_view/a_id/1087704/loc/en_US["Antwort Auf Knowledgebase 1087704"] Um zu erfahren, wie Sie regelmäßig ein neues vollständiges Backup erstellen können, das alte vollständige Backups und alle zugehörigen untergeordneten inkrementellen Dateien ersetzt.
+Wenn Sie feststellen, dass die Anzahl der inkrementellen Backup-Dateien für den Speicherplatz, den Sie für Backups zugewiesen haben, zu groß wird, können Sie regelmäßig ein neues vollständiges Backup erstellen, um das alte vollständige Backup und alle seine untergeordneten inkrementellen Dateien zu ersetzen.
 
 ====
 

@@ -42,7 +42,7 @@ Im Bildschirm „Alle Workloads“ können Sie alle Workloads im Datacenter anze
 
 Auf der Seite können Sie auch die Performance-Details eines Workloads anzeigen. Sie können detaillierte Informationen über die IOPS, Kapazität und Latenz des Workloads anzeigen, indem Sie auf die Schaltfläche *Spalten auswählen / Reihenfolge* klicken und bestimmte Spalten auswählen, die angezeigt werden sollen. In der Spalte „Performance View“ werden die durchschnittlichen und Spitzen-IOPS für einen Workload angezeigt. Durch Klicken auf das Symbol für die Workload-Analyse wird die detaillierte IOPS-Analyse angezeigt. Die Schaltfläche *Workload analysieren* im Pop-up-Fenster zur IOPS-Analyse führt Sie zur Seite Workload-Analyse, auf der Sie einen Zeitbereich auswählen und die Latenz-, Durchsatz- und Kapazitätstrends für den ausgewählten Workload anzeigen können. Weitere Informationen zur Workload-Analyse finden Sie unter _Fehlerbehebung von Workloads mithilfe des Workload Analyzer_
 
-link:concept-troubleshooting-workloads-using-the-workload-analyzer.adoc["Fehlersuche bei Workloads mithilfe der Workload Analyzer"]
+link:concept-troubleshooting-workloads-using-the-workload-analyzer.html["Fehlersuche bei Workloads mithilfe der Workload Analyzer"]
 
 
 

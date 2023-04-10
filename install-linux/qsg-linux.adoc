@@ -17,7 +17,7 @@ summary: Kurzanleitung für Unified Manager auf der Linux-Plattform.
 * Freier Speicherplatz: 100 GB Festplattenspeicher im `/opt/netapp/data` Verzeichnis, 50 GB in der Root-Partition. Für die separate Montage `/opt` Und `/var/log` Verzeichnisse, stellen Sie sicher, dass `/opt` Hat 15 GB, `/var/log` Hat 16 GB, und `/tmp` Verfügt über 10 GB freien Speicherplatz.
 
 
-Detaillierte Systemanforderungen und Informationen zur Installation des Produkts an einem gesicherten Standort finden Sie im link:./install-linux/concept-requirements-for-installing-unified-manager.html["Anforderungen für die Installation von Unified Manager"] Und das link:http://mysupport.netapp.com/matrix["Interoperabilitätsmatrix"].
+Detaillierte Systemanforderungen und Informationen zur Installation des Produkts an einem gesicherten Standort finden Sie im link:concept-requirements-for-installing-unified-manager.html["Anforderungen für die Installation von Unified Manager"] Und das link:http://mysupport.netapp.com/matrix["Interoperabilitätsmatrix"].
 
 
 
