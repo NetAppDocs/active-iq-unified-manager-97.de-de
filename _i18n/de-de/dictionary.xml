@@ -2604,7 +2604,6 @@
   <block id="67d49e16538979c413ddeb36f029388c" category="list-text">Sie können die Liste *Terminplanname*, *Empfänger*, *Frequenz*, *Tag* (wöchentlich), *Uhrzeit*, Und *Format* für den Berichtsplan.</block>
   <block id="3c089aca469ff81256c133ec51b447ce" category="list-text">Wenn Sie fertig sind, klicken Sie auf das Häkchen, um Ihre Änderungen zu speichern.</block>
   <block id="91d9102f2b20d2487525cb47bf7d79a5" category="summary">Dokumentation für Active IQ Unified Manager, AIQUM Dokumentation, um Dokumentation</block>
-  <block id="4a58c6ba2ac7cf0f2cd001d223b14e50" category="doc">Active IQ Unified Manager-Dokumentation</block>
   <block id="c33d5314a6e7b078bf9d71b8e0c1ea51" category="summary">Für den Zugriff auf die Unified Manager-Benutzeroberfläche müssen Sie einen unterstützten Browser verwenden.</block>
   <block id="6d84e3718084e0db779da4ff8791a2f2" category="doc">Unterstützte Browser</block>
   <block id="db5dfad2e62d29ace046414904d6d365" category="paragraph">In der Interoperabilitäts-Matrix finden Sie eine Liste der unterstützten Browser-Versionen.</block>
@@ -12478,4 +12477,5 @@
   <block id="ec41073735b02d172b0bc1ee60ea5ec9" category="paragraph"><block ref="ec41073735b02d172b0bc1ee60ea5ec9" category="inline-link-rx"></block></block>
   <block id="20bde173581d26c0c8c8f826587fe6b1" category="paragraph">Bei der Anzeige aller Cluster zeigt dieses Fenster die Anzahl der kompatiblen oder nicht kompatiblen Cluster, die Anzahl der kompatiblen oder nicht kompatiblen SVMs und die Anzahl der verschlüsselten Volumes an. Die Compliance basiert auf der<block ref="736160f7960b3abe2152eecfe71d1435" category="inline-link-rx"></block>. Klicken Sie auf den Rechtspfeil oben im Bedienfeld, um die Sicherheitsinformationen für alle Cluster auf der Seite Sicherheit anzuzeigen.</block>
   <block id="796f4a9be8e525f7e4d64c24bac529c9" category="paragraph"><block ref="796f4a9be8e525f7e4d64c24bac529c9" category="inline-link-rx"></block></block>
+  <block id="dd5452c4b1a9b73792ee149d9b8c4bd0" category="sidebar">Active IQ Unified Manager 9.7-Dokumentation</block>
 </blocks>
